@@ -1,0 +1,34 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.155.1/containers/python-3
+{
+	"name": "project",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+		}
+	},
+
+	"containerUser": "root",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-python.python",
+		"njpwerner.autodocstring",
+		"hediet.vscode-drawio",
+		"docsmsft.docs-markdown",
+		"streetsidesoftware.code-spell-checker",
+		"ms-toolsai.jupyter",
+		"ms-toolsai.jupyter-renderers",
+		"shuworks.vscode-table-formatter",
+		"redhat.vscode-yaml",
+		"trond-snekvik.simple-rst"
+	],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "bash /tmp/config_devcontainer.sh"
+}
